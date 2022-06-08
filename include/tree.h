@@ -4,7 +4,6 @@
 #include <vector>
 #include <string>
 class Tree {
-private:
  private:
     struct Node {
         char imp;
@@ -15,7 +14,6 @@ private:
         if (!number.size())
             return;
         if (root->imp != '*') {
-            for (auto u = number.begin(); u != number.end(); u++) 
             for (auto u = number.begin(); u != number.end(); u++)
             if (*u == root->imp) {
                 number.erase(u);
@@ -40,10 +38,8 @@ private:
         for (size_t a = 0; a < root->rear.size(); a++)
             swap(root->rear[a], str);
     }
-
-public:
-public:
-    std::string operator[](int i) const { 
+ public:
+    std::string operator[](int i) const {
         if (i >= gree.size())
             return "";
         return gree[i];
