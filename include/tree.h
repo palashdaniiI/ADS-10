@@ -28,7 +28,7 @@ class Tree {
             Btr(root->rear[a], number);
     }
     std::vector<std::string> gree;
-    void swap(Node* root, std::string str = "") {
+    void mus(Node* root, std::string str = "") {
         if (!root->rear.size()) {
             str += root->value;
             gree.push_back(str);
@@ -36,7 +36,7 @@ class Tree {
         if (root->value != '*')
             str += root->value;
         for (size_t a = 0; a < root->rear.size(); a++)
-            swap(root->rear[a], str);
+            mus(root->rear[a], str);
     }
 
  public:
@@ -49,7 +49,7 @@ class Tree {
         root = new Node();
         root->value = '*';
         Btr(root, value);
-        swap(root);
+        mus(root);
     }
 };
 #endif  // INCLUDE_TREE_H_
