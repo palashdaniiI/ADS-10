@@ -48,7 +48,7 @@ class Tree {
     explicit Tree(std::vector<char> imp) {
         root = new Node();
         root->imp = '*';
-        Btr(root, imp);
+        swap(root, imp);
         swap(root);
     }
 };
