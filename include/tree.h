@@ -38,6 +38,7 @@ class Tree {
         for (size_t a = 0; a < root->rear.size(); a++)
             swap(root->rear[a], str);
     }
+ 
  public:
     std::string operator[](int i) const {
         if (i >= gree.size())
